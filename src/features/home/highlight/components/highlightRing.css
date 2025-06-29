@@ -1,0 +1,41 @@
+/* @property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+} */
+
+.highlight-ring.new-ring::before {
+  /* border-color: var(--color-new); */
+  border: 1.5px solid var(--color-new);
+  /* padding: 6px;  */
+  /* border: none; */
+}
+
+.highlight-ring {
+  position: relative;
+}
+
+.highlight-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid #6b728059;
+  border-radius: 9999px;
+  z-index: 0;
+  pointer-events: none;
+  transition: border-style 0.3s;
+}
+
+.highlight-ring[data-spinning="true"]::before {
+  border-style: dashed;
+  animation: spinRing 0.6s linear;
+}
+
+@keyframes spinRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

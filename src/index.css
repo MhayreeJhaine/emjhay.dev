@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@theme {
+  --breakpoint-4xs: 320px;
+  --breakpoint-3xs: 340px;
+  --breakpoint-2xs: 385px;
+  --breakpoint-xs: 400px;
+  --breakpoint-smd: 520px;
+  --breakpoint-xmd: 570px;
+  --breakpoint-2xmd: 720px;
+
+  --color-white: #fff;
+  --color-gold: #ffd700;
+  --color-tooltipBg: #e5e5e5;
+  --color-black: #000;
+  --color-red: #ef4444;
+  --color-hoverNav: #e5e7eb;
+  --color-hoverNavDark: #9ca3af;
+  --color-blue: #3b82f6;
+  --color-inputBorder: #1f2937;
+  --color-label: #5c6176;
+  --color-hoverBioBtns: rgba(107, 114, 128, 0.35);
+  --color-carouselBtns: rgba(107, 114, 128, 0.7);
+  --color-success: #22c55e;
+
+  --animate-wig: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  --animate-spi: spin 1s linear;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+html {
+  background-color: #fff;
+  color: #000;
+  --color-ProfileGray: #fff;
+  --color-InputBorder: #2f343b;
+  --color-qrBg: #fff;
+  --color-modalBg: #fff;
+  --color-Bg: #fff;
+  --color-new: #000;
+  --color-newBg: #fff;
+}
+html.dark {
+  background-color: #000;
+  color: #fff;
+  --color-ProfileGray: #2d2d33;
+  --color-InputBorder: #414554;
+  --color-qrBg: #202020;
+  --color-modalBg: #131314;
+  --color-Bg: #000;
+  --color-new: #fff;
+  --color-newBg: rgba(107, 114, 128, 0.35);
+}
