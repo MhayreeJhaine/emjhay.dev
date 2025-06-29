@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import ThemeToggle from "../../../features/home/nav/themeToggle/themeToggle";
 import { IoColorFill } from "react-icons/io5";
 import { PiReadCvLogoBold } from "react-icons/pi";
@@ -9,7 +8,7 @@ import Switch from "./switch";
 const UseContent = () => {
   // const [showMore, setShowMore] = useState(false);
   const handleResumeDownload = () => {
-    alert("Resume downloaded");
+    alert("Coming up soonest! 😊");
   };
 
   return (
@@ -32,7 +31,6 @@ const UseContent = () => {
         </div>
 
         <div
-          // onClick={handleResumeDownload}
           className="flex items-center justify-between py-2 cursor-pointer
            hover:bg-hoverBioBtns transition-all duration-500 ease-in-out -mx-5 px-5"
         >

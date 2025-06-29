@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MediaItem } from "../../../../constants/data/mediaData";
+import { MediaItem } from "../data/mediaData";
 import ReelActions from "./reelActions";
 
 type Props = {

@@ -40,7 +40,6 @@ export const certifications = [
   {
     id: "1",
     title: "Empower Her Community",
-    // date: "April 2024",
     image: "./images/ehc.png",
     urlLink: "https://empowerhercommunity.net/",
   },
@@ -58,21 +57,12 @@ export const testimonials = [
   },
   {
     name: "Chinedu Obasi",
-    role: "Product Manager at SoftStack",
+    // role: "Product Manager at SoftStack",
     content:
       "Working with Maryjane was a delight. Her attention to detail and design is phenomenal. She took initiative and brought ideas that elevated our product.",
     avatar: "./images/certification.jpg",
     urlname: "ovie_david",
     link: "https://www.linkedin.com/in/chinedu-obasi",
-  },
-  {
-    name: "Amanda Lee",
-    role: "Mentor@SheCodes Africa",
-    content:
-      "She’s one of the most passionate devs I’ve mentored. The pace at which she grows and learns is inspiring!",
-    avatar: "./images/devJourney.jpeg",
-    urlname: "nanu_oghenetega",
-    link: "https://www.linkedin.com/in/amanda-lee",
   },
 ];
 
@@ -84,26 +74,21 @@ export const devJourney = [
   },
 
   {
-    title: "Internship at XYZ",
+    title: "Internship at Empower Her Community",
     year: "2023",
     description:
-      "Worked on real-world projects and improved debugging & architecture skills.",
+      "Joined Empower Her Community as a frontend intern, building my first projects along with my very first portfolio.",
   },
   {
     title: "Discovered React",
-    year: "2023",
-    description:
-      "Learned React, built side projects, and joined tech communities.",
-  },
-  {
     year: "2024",
-    title: "Joined Empower Her Community",
     description:
-      "Participated in frontend development bootcamp and built portfolio.",
+      "Learned React, joined tech communities and atteneded my very first tech (GDG) event in December.",
   },
   {
     year: "2025",
     title: "Freelancing & Updated Portfolio",
-    description: "Started working with clients and expanding my tech stack.",
+    description:
+      "Began working with close associates on personal projects, gaining hands-on experience as a developer.",
   },
 ];
