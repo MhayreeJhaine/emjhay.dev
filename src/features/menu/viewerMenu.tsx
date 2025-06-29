@@ -26,8 +26,7 @@ const ViewerMenu = () => {
   };
 
   const handleResumeDownload = () => {
-    // console.log("Resume downloaded");
-    alert("Resume downloaded");
+    alert("Coming up soonest! 😊");
   };
 
   return (
@@ -50,7 +49,7 @@ const ViewerMenu = () => {
           View as Owner
         </p>
         <p onClick={handleResumeDownload} className="text-lg cursor-pointer">
-          Download Resume
+          View Resume
         </p>
         <a href="https://github.com/MhayreeJhaine" target="_blank">
           <p className="text-lg cursor-pointer">GitHub</p>

@@ -16,6 +16,11 @@ export type MediaItem = {
   category: "posts" | "reels" | "tagged";
 };
 
+// Local media fallback
+export const ReelMediaSource: Record<string, string[]> = {
+  r1: ["./videos/3Dee.mp4"],
+};
+
 export const useMedia = () => {
   const [media, setMedia] = useState<MediaItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -24,13 +29,25 @@ export const useMedia = () => {
     const fetchMedia = async () => {
       const querySnapshot = await getDocs(collection(db, "media"));
       const data: MediaItem[] = [];
+
       querySnapshot.forEach((doc) => {
-        data.push({ id: doc.id, ...doc.data() } as MediaItem);
+        const docData = doc.data() as Omit<MediaItem, "id">;
+        const id = doc.id;
+
+        const patchedMedia =
+          docData.type === "video" && ReelMediaSource[id]
+            ? ReelMediaSource[id]
+            : docData.media;
+
+        data.push({ id, ...docData, media: patchedMedia });
       });
+
       setMedia(data);
       setLoading(false);
     };
+
     fetchMedia();
   }, []);
+
   return { media, loading };
 };

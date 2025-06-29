@@ -58,10 +58,7 @@ const Journey = ({ onClose, onPrevSection }: Props) => {
             onClick={handleTouch}
             className="flex-1 flex items-center justify-center"
           >
-            <div
-              key={devJourney[currentIndex].title}
-              className="p-3 w-80 rounded-xl border bg-white border-gray-200"
-            >
+            <div className="p-3 w-80 rounded-xl border bg-white border-gray-200">
               <div className="flex flex-col gap-3">
                 <p className="font-bold text-2xl text-black">
                   {devJourney[currentIndex].year}
@@ -80,7 +77,7 @@ const Journey = ({ onClose, onPrevSection }: Props) => {
                   className="text-black text-3xl cursor-pointer"
                 />
                 <HiChevronRight
-                  onClick={goToNext}
+                  // onClick={goToNext}
                   className="text-black text-3xl cursor-pointer"
                 />
               </div>
