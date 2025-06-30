@@ -1,4 +1,4 @@
-import { MediaItem } from "../../../constants/data/mediaData";
+import { MediaItem } from "../hooks/useMedia";
 
 type MediaGridProps = {
   items: MediaItem[];

@@ -13,7 +13,7 @@ import {
 import { useVisitorStore } from "../../../../store/visitorStore";
 import { useEffect, useState, useCallback } from "react";
 import { getGuestEmail } from "../../../../constants/utils/guestUtils";
-import { MediaItem } from "../data/mediaData";
+import { MediaItem } from "../hooks/useMedia";
 
 type Props = {
   item: MediaItem;

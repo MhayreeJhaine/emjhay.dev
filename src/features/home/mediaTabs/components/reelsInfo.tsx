@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { MediaItem } from "../data/mediaData";
+
 import ReelActions from "./reelActions";
+import { MediaItem } from "../hooks/useMedia";
 
 type Props = {
   item: MediaItem;
