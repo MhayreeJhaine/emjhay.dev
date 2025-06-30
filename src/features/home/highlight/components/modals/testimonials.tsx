@@ -89,7 +89,7 @@ const Testimonials = ({
             <a
               href={testimonials[currentIndex].link}
               target="_blank"
-              className="text-label text-md font-semibold w-72 text-left cursor-pointer underline hover:text-blue"
+              className="text-label text-md font-semibold w-72 z-30 text-left cursor-pointer underline hover:text-blue"
             >
               @{testimonials[currentIndex].urlname}
             </a>

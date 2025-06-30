@@ -1,31 +1,3 @@
-// import { useState } from "react";
-// import HighlightRow from "./highlightRow";
-// import SkillsContent from "./skillContent";
-// import Certifications from "./certification";
-// import Testimonials from "./testimonials";
-// import DevJourney from "./devJourney";
-
-// const PortfolioHighlights = () => {
-//   const [activeSection, setActiveSection] = useState<string | null>(null);
-
-//   return (
-//     <div>
-//       <HighlightRow onSelect={setActiveSection} />
-
-//       {activeSection && (
-//         <div className="mt-6 px-4">
-//           {activeSection === "Skills" && <SkillsContent />}
-//           {activeSection === "Certifications" && <Certifications />}
-//           {activeSection === "Testimonials" && <Testimonials />}
-//           {activeSection === "Dev Journey" && <DevJourney />}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default PortfolioHighlights;
-
 import { useState } from "react";
 import HighlightRow from "./highlightRow";
 import Skills from "./modals/skillContent";
@@ -87,3 +59,31 @@ const PortfolioHighlights = () => {
 };
 
 export default PortfolioHighlights;
+
+// import { useState } from "react";
+// import HighlightRow from "./highlightRow";
+// import SkillsContent from "./skillContent";
+// import Certifications from "./certification";
+// import Testimonials from "./testimonials";
+// import DevJourney from "./devJourney";
+
+// const PortfolioHighlights = () => {
+//   const [activeSection, setActiveSection] = useState<string | null>(null);
+
+//   return (
+//     <div>
+//       <HighlightRow onSelect={setActiveSection} />
+
+//       {activeSection && (
+//         <div className="mt-6 px-4">
+//           {activeSection === "Skills" && <SkillsContent />}
+//           {activeSection === "Certifications" && <Certifications />}
+//           {activeSection === "Testimonials" && <Testimonials />}
+//           {activeSection === "Dev Journey" && <DevJourney />}
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default PortfolioHighlights;
