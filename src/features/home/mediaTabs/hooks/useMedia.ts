@@ -18,7 +18,7 @@ export type MediaItem = {
 
 // Local media fallback
 export const ReelMediaSource: Record<string, string[]> = {
-  r1: ["./videos/3Dee.mp4"],
+  r1: ["./videos/3dVerse.mp4"],
 };
 
 export const useMedia = () => {
