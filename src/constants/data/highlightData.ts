@@ -47,22 +47,13 @@ export const certifications = [
 
 export const testimonials = [
   {
-    name: "Nanu Oghenetega",
-    role: "Founder @NanoTech",
-    avatar: "./images/EmJhay.jpg",
+    name: "Omokefe (David) Ovie",
+    role: "",
     content:
-      "Maryjane is one of the most dependable developers I’ve worked with. Her UI skills are excellent!",
-    urlname: "nanu_oghenetega",
-    link: "https://www.linkedin.com/in/michael-nanu",
-  },
-  {
-    name: "Chinedu Obasi",
-    // role: "Product Manager at SoftStack",
-    content:
-      "Working with Maryjane was a delight. Her attention to detail and design is phenomenal. She took initiative and brought ideas that elevated our product.",
-    avatar: "./images/certification.jpg",
+      "I had the pleasure of working with Maryjane, on a React Native project. She is positive, eager to learn, and shows strong potential. She embraces feedback, asks thoughtful questions, and improves steadily. Dependable and collaborative, she’s set to grow into a valuable team member with mentorship.",
+    avatar: "./images/davidOvie.jpg",
     urlname: "ovie_david",
-    link: "https://www.linkedin.com/in/chinedu-obasi",
+    link: "https://www.linkedin.com/in/omokefe-ovie/",
   },
 ];
 
