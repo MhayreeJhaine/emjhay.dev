@@ -42,7 +42,7 @@ const Profile = () => {
         {/* stats */}
         <div className="flex flex-row gap-6 md:gap-10 lg:gap-14  mt-2">
           <div className="">
-            <h3 className="font-bold">3</h3>
+            <h3 className="font-bold">1</h3>
             <h3>posts</h3>
           </div>
           <div>
