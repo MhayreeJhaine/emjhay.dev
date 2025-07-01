@@ -1,5 +1,5 @@
 import { LuEllipsisVertical } from "react-icons/lu";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   getLastLiker,
   getLikesCount,
@@ -29,6 +29,21 @@ const PostCard = ({ item }: PostCardProps) => {
 
   const guestEmail = getGuestEmail();
 
+  const fetchLikeData = useCallback(async () => {
+    const [liked, liker, count] = await Promise.all([
+      hasUserLiked("posts", item.id, guestEmail),
+      getLastLiker("posts", item.id),
+      getLikesCount("posts", item.id),
+    ]);
+    setHasLiked(liked);
+    setLastLiker(liker);
+    setLikesCount(count);
+  }, [item.id, guestEmail]);
+
+  useEffect(() => {
+    fetchLikeData();
+  }, [fetchLikeData]);
+
   const handleLikeToggle = async () => {
     if (hasLiked) {
       await unlikeItem("posts", item.id, guestEmail);
@@ -36,29 +51,8 @@ const PostCard = ({ item }: PostCardProps) => {
       await likeItem("posts", item.id, guestEmail);
     }
 
-    const [liked, liker, count] = await Promise.all([
-      hasUserLiked("posts", item.id, guestEmail),
-      getLastLiker("posts", item.id),
-      getLikesCount("posts", item.id),
-    ]);
-
-    setHasLiked(liked);
-    setLastLiker(liker);
-    setLikesCount(count);
+    fetchLikeData();
   };
-
-  useEffect(() => {
-    (async () => {
-      const [liked, liker, count] = await Promise.all([
-        hasUserLiked("posts", item.id, guestEmail),
-        getLastLiker("posts", item.id),
-        getLikesCount("posts", item.id),
-      ]);
-      setHasLiked(liked);
-      setLastLiker(liker);
-      setLikesCount(count);
-    })();
-  }, [item.id, guestEmail]);
 
   return (
     <div className="w-full overflow-y-auto overflow-x-hidden mb-4">
