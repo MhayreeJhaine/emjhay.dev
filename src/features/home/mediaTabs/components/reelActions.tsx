@@ -44,6 +44,10 @@ const ReelActions = ({
     setLikesCount(count);
   }, [item.id, guestEmail, setLastLiker, setLikesCount]);
 
+  useEffect(() => {
+    fetchLikeData();
+  }, [fetchLikeData]);
+
   const handleLikeToggle = async () => {
     if (hasLiked) {
       await unlikeItem("reels", item.id, guestEmail);
@@ -53,10 +57,6 @@ const ReelActions = ({
 
     fetchLikeData();
   };
-
-  useEffect(() => {
-    fetchLikeData();
-  }, [fetchLikeData]);
 
   return (
     <div className="flex flex-col items-center gap-5 md:gap-7 lg:gap-3 cursor-pointer">
