@@ -22,7 +22,7 @@ const ShareProfile = () => {
       navigator.share({
         title: "My Portfolio",
         text: "Check out my portfolio",
-        url: "https://emjhay.dev",
+        url: "https://emjhay-dev.onrender.com",
       });
     } else {
       //   showCopiedMessage("Sharing not supported on this browser");
@@ -30,8 +30,7 @@ const ShareProfile = () => {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("https://emjhay.dev");
-    // alert("Link copied to clipboard!");
+    navigator.clipboard.writeText("https://emjhay-dev.onrender.com");
     showCopiedMessage();
   };
 
@@ -73,7 +72,7 @@ const ShareProfile = () => {
           >
             <img
               id="qrCode"
-              src="./images/QrCode.png"
+              src="./images/qrCode.png"
               alt="Portfolio QR code"
               className="w-55 h-55 md:w-70 md:h-70 lg:w-55 lg:h-55 rounded-2xl"
             />
