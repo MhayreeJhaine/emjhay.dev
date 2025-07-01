@@ -72,7 +72,7 @@ const ShareProfile = () => {
           >
             <img
               id="qrCode"
-              src="./images/qrCode.png"
+              src="./images/QrCode.png"
               alt="Portfolio QR code"
               className="w-55 h-55 md:w-70 md:h-70 lg:w-55 lg:h-55 rounded-2xl"
             />
